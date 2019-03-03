@@ -10,3 +10,6 @@ Java Program to check correctness of NIP
  -Sum the results 
   
  -Calculate the remainder of by the division by 11
+
+## Example: 
+![alt text](https://github.com/LuciferAJ/NIP/blob/master/NIP%20Table.png)
