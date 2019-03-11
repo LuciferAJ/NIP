@@ -9,8 +9,13 @@ public class Main {
         System.out.print("Enter NIP no. in xxx-xxx-xx-xx");
         Scanner sc= new Scanner(System.in);
         String nipString=sc.next();
+        if(nipString.length=10){
         char[] nipChar=nipString.toCharArray();
-        System.out.println(toCheckNIP(nipChar));
+        System.out.println(toCheckNIP(nipChar));}
+        else{
+        System.out.println("Input is less than or equal to 10..");
+            
+        }
     }
 
     private static boolean toCheckNIP(char[] nipChar) {
