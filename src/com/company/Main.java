@@ -9,6 +9,7 @@ public class Main {
         System.out.print("Enter NIP no. in xxx-xxx-xx-xx");
         Scanner sc= new Scanner(System.in);
         String nipString=sc.next();
+        //Checking input is 10 or not
         if(nipString.length=10){
         char[] nipChar=nipString.toCharArray();
         System.out.println(toCheckNIP(nipChar));}
@@ -17,8 +18,9 @@ public class Main {
             
         }
     }
-
+    //function to check is it NIP and will return True or False
     private static boolean toCheckNIP(char[] nipChar) {
+        //Assiging input to reduced array with removing "-"
         char[] reducedNip = new char[10];
         reducedNip[0] = nipChar[0];
         reducedNip[1] = nipChar[1];
@@ -31,6 +33,7 @@ public class Main {
         reducedNip[8] = nipChar[11];
         reducedNip[9] = nipChar[12];
         int[] nipInt = toIntArray(reducedNip);
+        //Weights as given in question
         int[] weights = {6, 5, 7, 2, 3, 4, 5, 6, 7};
         int[] finalKey = new int[10];
         int sum = 0;
@@ -51,6 +54,7 @@ public class Main {
 
 
     }
+    //Converting it to Int array for calculation.
     private static int[] toIntArray(char[] reducedNip) {
         int[] result=new int[reducedNip.length];
         for (int i=0; i<reducedNip.length;i++){
